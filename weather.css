@@ -1,0 +1,567 @@
+* {
+	font-family: 'Arimo', sans-serif;
+}
+html {
+		background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzH5aYwIiCqMotHjaJOZG8WFVkFz0-oHZepGlD8m44ujRV0qoE&usqp=CAU");
+		background-repeat: repeat;
+  	background-size: 100vw 1000px;
+}
+li {
+  list-style-type:none;
+}
+header > h1 > a {
+  text-decoration:none;
+  color: rgb(54, 107, 255);
+  font-weight: bold;
+  font-size: 25px;
+}
+#magGlass {
+	height: 19px;
+	position: relative;
+	right: 27px;
+}
+.map > .ol-viewport > .ol-overlaycontainer-stopevent {
+	display: none;
+}
+#allWeather > a {
+	padding-left:10px;
+}
+#search {
+	border:solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: rgb(194, 194, 194);
+	height:30px;
+	padding: 10px;
+	box-sizing: border-box;
+	width:80%;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+#buttons {
+  display: flex;
+  justify-content: center;
+	margin-bottom: 20px;
+}
+#buttons > button {
+	border: solid;
+	border-width: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-color: rgb(194, 194, 194);
+	font-weight: bold;
+}
+#current {
+	border-style: solid none solid solid;
+	border-radius: 5px 0px 0px 5px;
+}
+#sixteenDayButton {
+	border-radius: 0px 5px 5px 0px;
+}
+.backgroundBlue {
+	background-color: rgb(91, 134, 255);
+	color: white;
+}
+#weatherData {
+	background-color: rgb(241, 241, 241);
+	border-radius: 20px;
+	z-index: 0;
+}
+#radar {
+	border-style: solid none solid none;
+}
+h3, h4, h5, h6, #location {
+    text-transform: capitalize;   
+}
+#curMobBot {
+	display: flex;
+	justify-content: space-around;
+}
+#curMobBot > div > img {
+	
+	position: relative;
+	top: 18px;
+}
+#curMobBot > h4 {
+	margin-top:0px;
+	margin-bottom: 5px;
+}
+#curMobBot > div > h1 {
+	text-transform: capitalize;
+}
+sup {
+	position: relative;
+	top: 2px;
+	font-size: .65em;
+}
+#curSliderLabels, #curSliderTicks {
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	bottom: 70px;
+	width:80%;
+	height: 1px;
+	display: flex;
+	justify-content: space-between;
+	user-select: none;
+	z-index: 1;
+}
+#curSliderLabels {
+	bottom:47px;
+	width:86%;
+	z-index: 1;
+}
+.map {
+	height: 256px;
+	width: 256px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ol-overlaycontainer, canvas, #radarImg {
+	width:256px;
+	height:256px;
+}
+.ol-zoom-out, .ol-zoom-in, .ol-rotate-reset {
+	visibility: hidden;
+}
+#radarOverlay {
+	position: relative;
+	bottom: 256px;
+}
+#radarControls {
+	position: relative;
+	top: 60px;
+}
+#radarControls {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	margin-right:auto;
+	margin-left: auto;
+	width:300px;
+	margin-top: 10px;
+}
+#timeForward > p {
+	margin:0px;
+}
+#labelTop {
+	font-size: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+#legend > img {
+	width: 256px;
+	height: 8px;
+}
+#legend {
+	height:53px;
+}
+#rain {
+	position:relative;
+	bottom:16px;
+}
+#snow {
+	position:relative;
+	bottom:20px;
+	padding-bottom: 5px;
+}
+#weatherData > #sixtDaySec, #weatherData > #sevDaySec {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+#curSlider {
+	-webkit-appearance: none;
+	background: none;
+	outline: none;
+	border-radius: 5px;
+	width: 83%;
+	margin-right: auto;
+	margin-left: auto;
+	height:10px;
+	padding: 20px;
+	z-index: 2;
+}
+#curSlider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+  appearance: none;
+	background: rgb(91, 134, 255);
+	height:20px;
+	width: 20px;
+	cursor: pointer;
+	position: relative;
+	bottom: 15px;
+	border-radius: 5px;
+}
+#curSlider::-moz-range-thumb {
+	background: rgb(91, 134, 255);
+	height:20px;
+	width: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative;
+	bottom: 15px;
+}
+#curSliderBox {
+	display:flex;
+	flex-direction: column;
+	height: 70px;
+}
+.colorTick {
+	color: rgb(91, 134, 255);
+	font-weight: bold;
+}
+#slider {
+	-webkit-appearance: none;
+	background: rgb(200, 200, 200);
+	outline: none;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	height:10px;
+}
+#slider:hover {
+	cursor:pointer;
+}
+#slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+  appearance: none;
+	background: rgb(91, 134, 255);
+	height:20px;
+	width: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#slider::-moz-range-thumb {
+	background: rgb(91, 134, 255);
+	height:20px;
+	width: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#timeForward > p{
+	font-weight: bold;
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+#buttons > button {
+	width:25%;
+}
+#in, #out {
+	background-color: rgb(194, 194, 194);
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	border: solid;
+	border-width: 1px;
+	border-color: rgb(180, 180, 180);
+	border-radius: 5px;
+	width:30px;
+	height:30px;
+	position: relative;
+	bottom:6px;
+}
+#in {
+	margin-left: 10px;
+}
+#sixtDaySec > div, #sevDaySec > div {
+	text-align: center;
+}
+#sixtDaySec > div > h5, #sixtDaySec > div > p, #sevDaySec > div > h5, #sevDaySec > div > p {
+	margin:0px;
+}
+#sixtDaySec > div > h5, #sevDaySec > div > h5 {
+	margin-top:15px;
+}
+#sixtDaySec > div > p, #sevDaySec > div > p {
+	margin-bottom:15px;
+}
+@media only screen and (min-width:700px) {
+	html {
+		background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzH5aYwIiCqMotHjaJOZG8WFVkFz0-oHZepGlD8m44ujRV0qoE&usqp=CAU");
+		background-repeat: no-repeat;
+  	background-size: 100vw 100vw;
+	}
+	#slider {
+		height: 8px;
+		margin-right: 5px;	
+	}
+	#slider::-webkit-slider-thumb {
+		height:15px;
+		width: 15px;
+	}
+	#slider::-moz-range-thumb {
+		height:15px;
+		width: 15px;
+	}
+	#radarControls {
+		width:256px;
+		margin-top: 0px;
+	}
+	#in, #out {
+		position: relative;
+		left: 10px;
+		background-color: rgb(194, 194, 194);
+		color: white;
+		border:none;
+		font-weight: bold;
+		font-size: 18px;
+		height:20px;
+		width:20px;
+		top:0px;
+	}
+	#in {
+		margin-left: 0px;
+	}
+	#allWeather {
+		position:relative;
+		bottom: 5px;
+		margin: 5px;
+		font-size: 30px;
+	}
+	#in {
+		border-radius:0px 3px 3px 0px;
+	}
+	#out {
+		border-radius:3px 0px 0px 3px;
+	}
+	#in:hover {
+		background-color: rgb(91, 134, 255);
+		cursor:pointer;
+	}
+	#out:hover {
+		background-color: rgb(91, 134, 255);
+		cursor:pointer;
+	}
+	form {
+		position: relative;
+		top: 80px;
+		justify-content: flex-start;
+	}
+	#search {
+		width:220px;
+		height: 32px;
+		border: solid;
+		border-radius: 13px;
+		border-color: rgb(194, 194, 194);
+		background-color: rgb(241, 241, 241);
+		border-width: 1px;
+		padding: 10px;
+		font-size: 18px;
+		text-transform: capitalize;
+		box-sizing: border-box;
+	}
+	#currentBox {
+		display:flex;
+		flex-direction: column;
+		align-content: center;
+	}
+	#currentBoxTop > div > p {
+		margin-bottom: 22px;
+	}
+	#currentBoxBottom{
+		height: fit-content;
+		width:fit-content;
+		z-index:1;
+	}
+	#curSliderLabels{
+		width:375px;
+	} 
+	#curSliderTicks {
+		width:345px;
+	}
+	#curSlider {
+		width: 360px;
+	}
+	#curSlider:hover {
+		cursor: pointer;
+	}
+	#currentBoxTop {
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#sixtDayPage, #sevDaySec {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	#sixtDayPage > div, #sevDaySec > div {
+		text-align: center;
+		margin-right: 10px;
+	}
+	#sixtDayPage > div > img {
+		height: 80px;
+	}
+	.sevDayDescDesk {
+		text-transform: capitalize;
+		text-align: center;
+	}
+	#sevDayBox > section {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		width:70px;
+	}
+	#sevDayBox > section > #sevDayDeskTopPart {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#sevDayBox > section > div > img {
+		height: 60px;
+	}
+	#radarBox {
+		padding-left:15px;
+		padding-right:15px;
+		padding-bottom:70px;
+		background-color: rgb(241, 241, 241);
+		border-radius: 10px;
+		margin-bottom: 30px;
+	}	
+	#topRow {
+		width:80%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: flex-end;
+		height: 320px;
+		margin-top: 70px;
+		margin-bottom:10px;
+		align-items: center;
+	}
+	#currentBox {
+		margin-right:40px;
+		background-color: rgb(241, 241, 241);
+		border-radius: 10px;
+		z-index:0;
+		height:250px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+	#currentBoxTop > div {
+		display: flex;
+		flex-direction: column;
+	}
+	#currentBoxTop > div > h1 {
+		font-size: 30px;
+		margin-bottom: 10px;
+	} 
+	#currentBoxTop > div > h3 {
+		margin: 0px;
+	}
+	#bottomRow {
+		width:80%;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-around;
+		align-items: center;
+		background-color: rgb(241, 241, 241);
+		border-radius: 10px;
+		padding-left: 10px;
+		margin-top:20px;
+	}
+	#sevDayBox {
+		width: 120%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	#desktopAll {
+		position: relative;
+		bottom: 80px;
+	}
+	#curImgDeskDiv {
+		height: 120px;
+	}
+	#sixtDayPage {
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		background-color: rgb(241, 241, 241);
+		border-radius:10px;
+		padding:10px;
+	}
+	#sixtDayPage > div {
+		margin-right: 20px;
+		width:
+	}
+#sixtDayPage > div > p {
+	font-weight: bold;
+}
+	#sixtDayPage > div > p, #sixtDayPage > div > h4 {
+		text-align: center;
+	}
+	#sixtDayPage > div > img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#sixtDayButtonBack {
+		height:170px;
+		width:120px;
+		border: none;
+		background-color: rgb(194, 194, 194);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 10px;
+	}
+	#sixtDayButton {
+		height: 170px;
+		margin-left: 10px;
+		border: none;
+		background-color: rgb(194, 194, 194);
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 0px 10px 10px 0px;
+	}
+	#sixtDayButton:hover {
+		background-color: rgb(91, 134, 255);
+		cursor: pointer;
+	}
+	#sixtDayButtonBack:hover {
+		background-color: rgb(91, 134, 255);
+		cursor: pointer;
+	}
+	h5{
+		text-align: center;
+	}
+	#sevDayDeskTopPart > h5 {
+		margin-bottom: 13px;
+	}
+	#sevDayBox > section > div > p {
+		text-align: center;
+		margin-top: 15px;
+		font-weight: bold;
+	}
+}
+@media only screen and (min-width:1000px) {
+	#sevDayDeskTopPart > h5 {
+		font-size: 16px;
+	}
+	#radarBox {
+		margin-right: 13%;
+	}
+	#bottomRow {
+		width:65%;
+	}
+	#sixtDayButtonBack {
+		width:30%;
+		height:30px;
+		margin:10px;
+	}
+}
